@@ -1,0 +1,26 @@
+@media all and (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu{ display: none; }
+    .navbar .nav-item:hover .nav-link{   }
+    .navbar .nav-item:hover .dropdown-menu{ display: block; }
+    .navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+.dropdown-menu a {
+    color: #212529!important;
+}
+.arhive {
+    margin-top: 50px;
+}
+
+.film-box {
+    margin: 15px;
+    padding: 25px;
+    border: 1px solid;
+}
+.sidebar-box {
+    margin: 15px;
+    padding: 25px;
+    border: 1px solid;
+}
+#sidebar  li {
+    list-style: none;
+}
