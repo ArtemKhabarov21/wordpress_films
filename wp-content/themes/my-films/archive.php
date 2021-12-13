@@ -10,12 +10,11 @@ get_header();
 
 
             <div class="container">
-                <h1>News</h1>
+                <h1><?php echo get_the_archive_title(); ?></h1>
                 <hr>
                 <div class="row">
 					<?php
 					if ( have_posts() ):
-						// Yep, we have posts, so let's loop through them.
 						while ( have_posts() ) : the_post(); ?>
                             <div class="col-md-4">
                                 <div class="card mb-4 box-shadow">
@@ -27,9 +26,9 @@ get_header();
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
                                                 <a class="btn btn-secondary" href="<?php the_permalink(); ?>"
-                                                   role="button">View details »</a>
+                                                   role="button"><?php echo __( 'View details »' ); ?></a>
                                             </div>
-                                            <small class="text-muted">9 mins</small>
+
                                         </div>
                                     </div>
                                 </div>
@@ -41,8 +40,7 @@ get_header();
 					endif; ?>
                 </div>
             </div>
-        </div> <!-- /container -->
-
+        </div>
     </main>
 <?php
 get_footer();

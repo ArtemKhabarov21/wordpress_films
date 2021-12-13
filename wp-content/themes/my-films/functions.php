@@ -154,54 +154,47 @@ function custom_taxonomy_actor() {
 
 add_action( 'init', 'custom_taxonomy_actor', 0 );
 
-//Add Custom Metabox year
-function year_custom_metabox() {
+function modify_archive_movie_query( WP_Query $query ) {
+	if ( is_admin() || ! $query->is_post_type_archive( 'films' ) ||
+	     ! $query->is_main_query() ) {
+		return;
+	}
 
-	add_meta_box(
-		'year-metabox',
-		'Year',
-		'year_custom_metabox_callback',
-		'films',
-		'normal'
-	);
+	$released_on = filter_input( INPUT_GET, 'filter_released_on',
+		FILTER_VALIDATE_INT );
+	$pg          = filter_input( INPUT_GET, 'filter_pg',
+		FILTER_VALIDATE_INT );
+	$rating      = filter_input( INPUT_GET, 'filter_rating',
+		FILTER_VALIDATE_INT );
+	$meta_query  = [];
+
+	if ( $rating ) {
+		$meta_query[] = [
+			'key'   => 'rating',
+			'value' => $rating,
+		];
+	}
+
+	if ( $released_on ) {
+		$meta_query[] = [
+			'key'   => 'release_year',
+			'value' => $released_on,
+		];
+	}
+
+	if ( $pg ) {
+		$meta_query[] = [
+			'key'   => 'pg',
+			'value' => $pg,
+		];
+	}
+
+
+	if ( $meta_query ) {
+		$query->set( 'meta_query', $meta_query );
+	}
 }
 
-add_action( 'add_meta_boxes', 'year_custom_metabox' );
+add_action( 'pre_get_posts', 'modify_archive_movie_query' );
 
-
-function year_custom_metabox_callback($post) {
-
-
-	?>
-
-    <div class="row">
-        <div class="label">Add year</div>
-        <div class="fields">
-            <input type="text" name="_year_year" value="<?php echo get_post_meta( $post->ID,
-				'post_year', true ) ?>"/>
-        </div>
-    </div>
-
-	<?php
-
-}
-
-function year_save_custom_metabox($post) {
-
-
-
-	if ( isset( $_POST["_year_year"] ) ):
-
-		update_post_meta( $post->ID, 'post_year', $_POST["_year_year"] );
-
-	endif;
-}
-
-add_action( 'save_post', 'year_save_custom_metabox' );
-
-
-
-
-
-
-
+include 'inc/acf-config.php';
