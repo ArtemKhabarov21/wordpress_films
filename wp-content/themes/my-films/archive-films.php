@@ -1,7 +1,4 @@
-<?php
-get_header();
-
-?>
+<?php get_header();  ?>
     <div class="container">
         <h1><?php echo get_the_archive_title(); ?></h1>
         <hr>
@@ -20,17 +17,15 @@ get_header();
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a class="btn btn-secondary" href="<?php the_permalink(); ?>"
-                                           role="button"><?php echo __( 'View details »' ); ?></a>
+                                           role="button"><?php echo __( 'View details »', MY_FILMS_TEXT_DOMAIN ); ?></a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
 				<?php endwhile;
 			else :
-				// No, we don't have any posts, so maybe we display a nice message
-				echo "<p class='no-posts'>" . __( "Sorry, there are no posts at this time." ) . "</p>";
+				echo "<p class='no-posts'>" . __( "Sorry, there are no posts at this time.", MY_FILMS_TEXT_DOMAIN ) . "</p>";
 			endif; ?>
         </div>
     </div>

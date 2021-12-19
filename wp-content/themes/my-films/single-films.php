@@ -8,7 +8,6 @@ get_header();
             <div class="row featurette">
                 <div class="col-md-7">
                     <div class="film-box">
-
                         <h2 class="featurette-heading"> <?php echo the_title(); ?></h2>
                         <p> <?php echo __( 'Release year:' ); ?><?php echo get_field( "release_year" ); ?></p>
                         <p> <?php echo __( 'Pg:' ); ?><?php echo get_field( "pg" ); ?></p>

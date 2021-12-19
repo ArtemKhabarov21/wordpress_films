@@ -26,10 +26,10 @@ get_header();
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <a class="btn btn-secondary" href="<?php the_permalink(); ?>"
-                                               role="button"><?php echo __( 'View details »' ); ?></a>
+                                               role="button"><?php echo __( 'View details »', MY_FILMS_TEXT_DOMAIN  ); ?></a>
                                         </div>
                                         <small class="text-muted">
-                                            <p> <?php echo __( 'Release year:' ); ?><?php echo get_post_meta( $post->ID,
+                                            <p> <?php echo __( 'Release year:', MY_FILMS_TEXT_DOMAIN  ); ?><?php echo get_post_meta( $post->ID,
 													'post_year', true ); ?></p></small>
                                     </div>
                                 </div>

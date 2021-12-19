@@ -1,4 +1,4 @@
-<form action="<?php echo get_post_type_archive_link( 'movie' ); ?>" method="get">
+<form action="<?php echo get_post_type_archive_link( 'films' ); ?>" method="get">
 
     <div class="mb-3">
         <label for="filter_released_on" class="form-label">Released On</label>

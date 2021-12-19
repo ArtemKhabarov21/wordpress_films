@@ -1,13 +1,6 @@
-<?php
-
-get_header();
-
-?>
+<?php get_header(); ?>
     <main>
-
-
         <div class="arhive">
-
             <div class="container">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -19,7 +12,6 @@ get_header();
 					$args = array(
 						'post_type' => 'films'
 					);
-
 					$the_query = new WP_Query( $args );
 					if ( $the_query->have_posts() ) :
 						while ( $the_query->have_posts() ) :
@@ -34,10 +26,10 @@ get_header();
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
                                                 <a class="btn btn-secondary" href="<?php the_permalink(); ?>"
-                                                   role="button"><?php echo __( 'View details »' ); ?></a>
+                                                   role="button"><?php echo __( 'View details »' , MY_FILMS_TEXT_DOMAIN ); ?></a>
                                             </div>
                                             <small class="text-muted">
-                                                <p> <?php echo __( 'Release year:' ); ?><?php echo get_post_meta( $post->ID,
+                                                <p> <?php echo __( 'Release year:', MY_FILMS_TEXT_DOMAIN  ); ?><?php echo get_post_meta( $post->ID,
 														'post_year', true ); ?></p></small>
                                         </div>
                                     </div>
@@ -48,12 +40,9 @@ get_header();
 					else:
 					endif;
 					?>
-
                 </div>
                 <hr>
-
             </div> <!-- /container -->
-
     </main>
 <?php
 get_footer();
