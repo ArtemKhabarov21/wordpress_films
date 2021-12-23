@@ -12,7 +12,6 @@ class CostomPost {
 
 	}
 
-	// Сostom post type.
 	function films_custom_post_type() {
 		$labels = array(
 			'name'          => __( 'Movies' ),

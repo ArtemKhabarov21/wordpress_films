@@ -1,7 +1,4 @@
-<?php
-$movies = get_field( 'Film_listing' ) ?: [];
-?>
-
+<?php $movies = get_field( 'Film_listing' ) ?: [];?>
 <div class="container">
 	<h2><?php echo get_field('title_block') ?></h2>
 	<div class="row row-cols-3">

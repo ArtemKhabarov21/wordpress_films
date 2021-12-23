@@ -1,6 +1,4 @@
-<?php
-wp_head();
-?>
+<?php wp_head();  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +8,7 @@ wp_head();
 </head>
 <body>
 <header>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/"><?php echo get_bloginfo( 'name' ); ?></a>
@@ -17,6 +16,7 @@ wp_head();
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="main_nav">
 				<?php
 				wp_nav_menu(
@@ -30,6 +30,8 @@ wp_head();
 					)
 				);
 				?>
+
             </div> <!-- navbar-collapse.// -->
+            <span class="telephone-header"><?php echo get_field('telephone', 'option'); ?></span>
         </div> <!-- container-fluid.// -->
     </nav>
