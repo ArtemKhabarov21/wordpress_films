@@ -14,4 +14,7 @@ new NIX_Lessions\Modules\CostomPost\CostomPost();
 include 'modules/theme/class-blocks.php';
 new NIX_Lessions\Modules\Blocks\blocks();
 
+include 'modules/theme/class-option.php';
+new \NIX_Lessions\Modules\Acf_options\Acf_options();
+
 include 'inc/acf-config.php';
