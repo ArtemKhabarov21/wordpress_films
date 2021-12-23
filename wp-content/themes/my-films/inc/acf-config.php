@@ -1,11 +1,11 @@
 <?php
 
-add_action('acf/init', 'my_acf_init');
-function my_acf_init() {
-acf_update_setting('show_admin', false);
-}
-
-add_filter('acf/settings/show_admin', '__return_false');
+//add_action('acf/init', 'my_acf_init');
+//function my_acf_init() {
+//acf_update_setting('show_admin', false);
+//}
+//
+//add_filter('acf/settings/show_admin', '__return_false');
 
 function hide_plugins_list_acf( $plugins ) {
 	if( in_array( 'advanced-custom-fields-pro/acf.php', array_keys( $plugins ) ) ) {

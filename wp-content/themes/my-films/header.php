@@ -27,8 +27,6 @@ wp_head();
 						'container_class' => 'navigation',
 						'items_wrap'      => '<ul  class="navbar-nav">%3$s</ul>',
 						'add_li_class'    => 'nav-item'
-
-
 					)
 				);
 				?>

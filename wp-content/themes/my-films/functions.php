@@ -17,5 +17,4 @@ include 'modules/theme/class-blocks.php';
 new \NIX_Lessions\Modules\Blocks\Blocks();
 
 
-
 include 'inc/acf-config.php';

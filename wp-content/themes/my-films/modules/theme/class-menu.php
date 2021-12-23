@@ -6,11 +6,16 @@ class Menu {
 
 	public function __construct() {
 		add_action( 'init', [ $this, 'reg_menu'] );
-		//add_filter( 'nav_menu_css_class', [ $this, 'add_additional_class_on_li']);
-		//add_filter( 'nav_menu_link_attributes', [ $this, 'add_menu_link_class']);
-		add_filter( 'nav_menu_submenu_css_class', [ $this, 'my_nav_menu_submenu_css_class'] );
-	}
 
+		//add_filter( 'nav_menu_css_class', [ $this, 'add_additional_class_on_li']);
+
+		//add_filter( 'nav_menu_link_attributes', [ $this, 'add_menu_link_class']);
+
+		add_filter( 'nav_menu_submenu_css_class', [ $this, 'my_nav_menu_submenu_css_class'] );
+
+
+
+	}
 
 	public function reg_menu() {
 		$locations = array(
