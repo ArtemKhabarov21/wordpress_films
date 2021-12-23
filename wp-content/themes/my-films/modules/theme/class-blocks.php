@@ -2,7 +2,7 @@
 
 namespace NIX_Lessions\Modules\Blocks;
 
-class locks {
+class blocks {
 	public function __construct() {
 		add_action( 'acf/init', [ $this, 'register_blocks'] );
 
