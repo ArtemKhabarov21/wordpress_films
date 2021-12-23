@@ -2,7 +2,7 @@
 
 namespace NIX_Lessions\Modules\Blocks;
 
-class Blocks {
+class blocks {
 	public function __construct() {
 		add_action( 'acf/init', [ $this, 'register_blocks'] );
 
@@ -38,6 +38,5 @@ class Blocks {
 			'category'          => 'formatting',
 		] );
 }
-
 
 }

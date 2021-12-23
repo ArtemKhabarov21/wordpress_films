@@ -1,5 +1,4 @@
-<?php
-$new_films = get_posts( [
+<?php $new_films = get_posts( [
 	'post_type' => 'films',
 	'orderby'   => 'publish_date',
 	'order'     => 'DESC',
