@@ -2,7 +2,6 @@
 
 namespace NIX_Lessions\Modules\Theme;
 
-
 class Theme {
 	public function __construct() {
 		$this->theme_support();
@@ -31,8 +30,5 @@ class Theme {
 	);
 
 	register_sidebar( $args );
-
 }
-
-
 }

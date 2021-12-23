@@ -15,8 +15,8 @@
 							$the_query->the_post(); ?>
                             <div class="col-md-4">
                                 <div class="card mb-4 box-shadow">
-                                    <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>"
-                                         data-holder-rendered="true">
+                                    <?php echo get_the_post_thumbnail( $page->ID, 'thumbnail'); ?>
+
                                     <div class="card-body">
                                         <h3><?php echo the_title(); ?> </h3>
                                         <p class="card-text"><?php the_excerpt(); ?></p>
@@ -50,8 +50,8 @@
 							while ( have_posts() ) : the_post(); ?>
                                 <div class="col-md-4">
                                     <div class="card mb-4 box-shadow">
-                                        <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>"
-                                             data-holder-rendered="true">
+                                        <?php echo get_the_post_thumbnail( $page->ID, 'thumbnail'); ?>
+
                                         <div class="card-body">
                                             <h3><?php echo the_title(); ?> </h3>
                                             <p class="card-text"><?php the_excerpt(); ?></p>
