@@ -12,6 +12,6 @@ include 'modules/theme/class-costompost.php';
 new NIX_Lessions\Modules\CostomPost\CostomPost();
 
 include 'modules/theme/class-blocks.php';
-new \NIX_Lessions\Modules\Blocks\Blocks();
+new NIX_Lessions\Modules\Blocks\blocks();
 
 include 'inc/acf-config.php';
