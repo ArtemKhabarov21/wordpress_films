@@ -48,7 +48,6 @@ get_header();
 					else:
 					endif;
 					?>
-
                 </div>
                 <hr>
                 <div class="container">

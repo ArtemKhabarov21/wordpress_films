@@ -8,8 +8,6 @@ class Theme {
 		$this->theme_support();
 		$this->theme_setting();
 		add_action( 'widgets_init', [$this, 'my_awesome_sidebar'] );
-
-
 	}
 	private function theme_setting() {
 		$cur_theme = wp_get_theme();

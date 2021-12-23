@@ -28,7 +28,6 @@
 				echo "<p class='no-posts'>" . __( "Sorry, there are no posts at this time.", MY_FILMS_TEXT_DOMAIN ) . "</p>";
 			endif; ?>
         </div>
-    </div>
-
+    </div
 <?php
 get_footer();

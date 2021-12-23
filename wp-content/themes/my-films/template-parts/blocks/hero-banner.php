@@ -1,5 +1,4 @@
 <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
-
 	<div class="carousel-inner">
 		<div class="carousel-item active">
             <img src="<?php echo get_field('image') ?>"
