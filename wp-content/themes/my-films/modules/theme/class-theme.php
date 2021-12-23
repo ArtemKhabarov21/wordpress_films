@@ -2,14 +2,11 @@
 
 namespace NIX_Lessions\Modules\Theme;
 
-
 class Theme {
 	public function __construct() {
 		$this->theme_support();
 		$this->theme_setting();
 		add_action( 'widgets_init', [$this, 'my_awesome_sidebar'] );
-
-
 	}
 	private function theme_setting() {
 		$cur_theme = wp_get_theme();
@@ -33,8 +30,5 @@ class Theme {
 	);
 
 	register_sidebar( $args );
-
 }
-
-
 }
