@@ -2,7 +2,20 @@
     <div class="container">
         <h1><?php echo get_the_archive_title(); ?></h1>
         <hr>
+        </new>
         <div class="row">
+<?php
+            $moviesAPI = new API( get_field( 'api_key', 'option' ) );
+            $array =  $moviesAPI->upcoming();
+
+        foreach( $array->results as $results ) {
+            echo '<li>';
+             echo $results->original_title;
+        echo '</li>';
+        }
+        echo '</ul>';
+
+?>
 			<?php echo get_template_part( 'template-parts/filter' ); ?>
 			<?php
 			if ( have_posts() ):
