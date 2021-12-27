@@ -17,4 +17,9 @@ new NIX_Lessions\Modules\Blocks\blocks();
 include 'modules/theme/class-option.php';
 new \NIX_Lessions\Modules\Acf_options\Acf_options();
 
+include 'modules/theme/class-api.php';
+
 include 'inc/acf-config.php';
+
+
+

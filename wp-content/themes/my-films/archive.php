@@ -2,6 +2,7 @@
     <main>
         <div class="arhive">
             <div class="container">
+
                 <h1><?php echo get_the_archive_title(); ?></h1>
                 <hr>
                 <div class="row">
